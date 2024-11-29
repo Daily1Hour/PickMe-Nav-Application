@@ -1,4 +1,4 @@
-import singleSpaSvelte from "single-spa-svelte";
+import singleSpaSvelte from "@/shared/single-spa-svelte";
 
 import NavTopBar from "@/pages/nav/ui/NavTopBar.svelte";
 
