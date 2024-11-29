@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
 
     return {
         plugins: [
-            svelte(),
+            svelte({ emitCss: false }),
             tsconfigPaths(),
             isMFA &&
                 vitePluginSingleSpa({
@@ -24,13 +24,8 @@ export default defineConfig(({ mode }) => {
                 }),
         ],
         build: {
-          // 빌드 설정
-          target: 'esnext', // single-spa 애플리케이션은 최신 JavaScript 기능을 사용하도록 설정
-          rollupOptions: {
-            output: {
-              exports: 'auto',
-            },
-          },
+            cssCodeSplit: false,
+            target: "esnext",
         },
     };
 });
