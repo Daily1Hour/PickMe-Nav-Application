@@ -6,7 +6,7 @@
 </script>
 
 <div class="container">
-    <TopAppBar variant="standard">
+    <TopAppBar variant="fixed">
         <Row>
             <Section>
                 <Title tag="a" href="/">PickMe</Title>
