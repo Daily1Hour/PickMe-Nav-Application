@@ -30,9 +30,9 @@
     .container {
         height: 64px;
     }
-    :global(.mdc-top-app-bar) {
+    /* :global(.mdc-top-app-bar) {
         --mdc-theme-primary: #3498db;
-    }
+    } */
     :global(.mdc-button) {
         font-size: 15px;
     }
