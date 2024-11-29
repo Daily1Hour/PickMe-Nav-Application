@@ -3,17 +3,27 @@
 
     import { mountRootParcel } from "single-spa";
 
-    import { parcel as parcelConfig } from "@/../dist/parcel.js";
-
     let container: HTMLDivElement;
 
     onMount(() => {
-        const parcel = mountRootParcel(parcelConfig, {
-            domElement: container, // Svelte에서 React를 렌더링할 DOM 요소
-        });
+        let parcel: any;
+
+        const loadParcel = async () => {
+            const parcelURL = import.meta.env.VITE_PARCEL_URL;
+
+            const { parcel: parcelConfig } = await import(/* @vite-ignore */ parcelURL);
+
+            parcel = mountRootParcel(parcelConfig, {
+                domElement: container,
+            });
+        };
+
+        loadParcel();
 
         return () => {
-            parcel.unmount();
+            if (parcel) {
+                parcel.unmount();
+            }
         };
     });
 </script>
