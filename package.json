@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:mfa": "vite build --mode mfa",
     "test": "echo \"Error: no test specified\"",
     "preview": "vite preview",
     "lint": "npx steiger ./src",
+    "start": "npm run build && npm run preview",
     "check": "svelte-check --tsconfig ./tsconfig.json && tsc -p tsconfig.node.json"
   },
   "devDependencies": {
