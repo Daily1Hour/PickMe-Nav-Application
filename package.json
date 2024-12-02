@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:single-spa": "vite build --config vite.single-spa.config.ts",
     "test": "echo \"Error: no test specified\"",
     "preview": "vite preview",
     "lint": "npx steiger ./src",
-    "start": "npm run build && npm run preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json && tsc -p tsconfig.node.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json && tsc -p tsconfig.node.json",
+    "start": "npm run build && npm run build:single-spa && npm run preview"
   },
   "devDependencies": {
     "@feature-sliced/steiger-plugin": "^0.5.2",
