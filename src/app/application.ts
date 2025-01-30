@@ -1,6 +1,6 @@
 import singleSpaSvelte from "@/shared/single-spa-svelte";
 
-import NavTopBar from "@/pages/nav/ui/NavTopBar.svelte";
+import NavTopBar from "@/pages/nav/ui/TopBar.svelte";
 
 const lifecycle = singleSpaSvelte({
     component: NavTopBar,

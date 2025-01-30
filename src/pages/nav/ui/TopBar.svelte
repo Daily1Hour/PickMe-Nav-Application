@@ -1,23 +1,19 @@
 <script lang="ts">
-    import TopAppBar, { Row, Section, Title } from "@smui/top-app-bar";
-    import Button from "@smui/button";
+    import TopAppBar, { Row, Section } from "@smui/top-app-bar";
 
+    import Logo from "./Logo.svelte";
     import AuthControl from "./AuthControl.svelte";
+    import NavList from "./NavList.svelte";
 </script>
 
 <div class="container">
     <TopAppBar variant="fixed">
         <Row>
             <Section>
-                <Title tag="a" href="/">PickMe</Title>
+                <Logo />
             </Section>
             <Section align="center">
-                <nav>
-                    <Button tag="a" href="/records" variant="unelevated">기록</Button>
-                    <Button tag="a" href="/reports" variant="unelevated">분석</Button>
-                    <Button tag="a" href="/review" variant="unelevated">리뷰</Button>
-                    <Button tag="a" href="/calendar" variant="unelevated">캘린더</Button>
-                </nav>
+                <NavList />
             </Section>
             <Section align="end">
                 <AuthControl />
