@@ -12,7 +12,7 @@
             <Section>
                 <Logo />
             </Section>
-            <Section align="center">
+            <Section>
                 <NavList />
             </Section>
             <Section align="end">
