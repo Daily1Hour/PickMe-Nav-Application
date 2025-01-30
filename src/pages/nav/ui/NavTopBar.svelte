@@ -1,7 +1,8 @@
 <script lang="ts">
-    import TopAppBar, { Row, Section, Title } from "@smui/top-app-bar";
     import Button from "@smui/button";
+    import TopAppBar, { Row, Section } from "@smui/top-app-bar";
 
+    import NavLogo from "./NavLogo.svelte";
     import AuthControl from "./AuthControl.svelte";
 </script>
 
@@ -9,7 +10,7 @@
     <TopAppBar variant="fixed">
         <Row>
             <Section>
-                <Title tag="a" href="/">PickMe</Title>
+                <NavLogo />
             </Section>
             <Section align="center">
                 <nav>
