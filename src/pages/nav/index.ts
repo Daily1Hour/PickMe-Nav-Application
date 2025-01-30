@@ -1,1 +1,1 @@
-export { default as NavTopBar } from "./ui/NavTopBar.svelte";
+export { default as NavTopBar } from "./ui/TopBar.svelte";
