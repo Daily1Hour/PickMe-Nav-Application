@@ -14,9 +14,9 @@
 </script>
 
 {#if width > MOBILE_BREAKPOINT}
-    <Title tag="a" href="/">PickMe</Title>
+    <Title tag="a" href="/" aria-label="Home" color="white">PickMe</Title>
 {:else}
-    <IconButton>
+    <IconButton tag="a" href="/" aria-label="Home">
         <Icon tag="svg" viewBox="0 0 24 24">
             <path fill="currentColor" d={mdiHome} />
         </Icon>
