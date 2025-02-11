@@ -1,8 +1,5 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import { mdiHome } from "@mdi/js";
-    import IconButton, { Icon } from "@smui/icon-button";
-    import { Title } from "@smui/top-app-bar";
 
     const MOBILE_BREAKPOINT = 768;
 
@@ -13,12 +10,10 @@
     });
 </script>
 
-{#if width > MOBILE_BREAKPOINT}
-    <Title tag="a" href="/" aria-label="Home" color="white">PickMe</Title>
-{:else}
-    <IconButton tag="a" href="/" aria-label="Home">
-        <Icon tag="svg" viewBox="0 0 24 24">
-            <path fill="currentColor" d={mdiHome} />
-        </Icon>
-    </IconButton>
-{/if}
+<a href="/" aria-label="Home" title="Home">
+    {#if width > MOBILE_BREAKPOINT}
+        <img src="/nav/resolution-logo.svg" alt="logo" style="height:75px;" />
+    {:else}
+        <img src="/nav/monogram-hq.svg" alt="logo" style="height: 75px;" />
+    {/if}
+</a>
