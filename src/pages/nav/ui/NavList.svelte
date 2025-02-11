@@ -15,4 +15,7 @@
         white-space: nowrap;
         scrollbar-width: none;
     }
+    :global(.section-nav > .mdc-button) {
+        background-color: transparent;
+    }
 </style>
