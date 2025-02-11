@@ -1,21 +1,19 @@
 <script lang="ts">
-    import Button from "@smui/button";
+    import NavButton from "./NavButton.svelte";
 </script>
 
 <nav class="section-nav">
-    <Button tag="a" href="/record/" variant="unelevated">기록</Button>
-    <Button tag="a" href="/report/" variant="unelevated">분석</Button>
-    <Button tag="a" href="/review/" variant="unelevated">리뷰</Button>
-    <Button tag="a" href="/calendar/" variant="unelevated">캘린더</Button>
+    <NavButton path="record" name="기록" />
+    <NavButton path="report" name="분석" />
+    <NavButton path="review" name="리뷰" />
+    <NavButton path="calendar" name="캘린더" />
 </nav>
 
 <style>
     .section-nav {
+        display: flex;
         overflow: auto;
         white-space: nowrap;
         scrollbar-width: none;
-    }
-    :global(.section-nav > .mdc-button) {
-        background-color: transparent;
     }
 </style>
