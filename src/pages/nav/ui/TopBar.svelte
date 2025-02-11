@@ -2,8 +2,8 @@
     import TopAppBar, { Row, Section, Title } from "@smui/top-app-bar";
 
     import Logo from "./Logo.svelte";
-    import AuthControl from "./AuthControl.svelte";
     import NavList from "./NavList.svelte";
+    import Tools from "./Tools.svelte";
 </script>
 
 <div>
@@ -15,8 +15,8 @@
                     <NavList />
                 </Title>
             </Section>
-            <Section class="auth" align="end">
-                <AuthControl />
+            <Section toolbar align="end">
+                <Tools />
             </Section>
         </Row>
     </TopAppBar>
