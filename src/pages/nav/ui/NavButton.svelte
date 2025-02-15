@@ -3,12 +3,12 @@
 
     export let name, path;
 
-    const base = import.meta.env.VITE_PUBLIC_URL;
-    const currentPath = window.location.pathname.replace(/\/$/, "");
+    const base = import.meta.env.VITE_PUBLIC_URL?.replace(/\/$/, "") ?? "";
+    const currentPath = window.location.pathname;
 </script>
 
-<div class="tab-container" data-active={currentPath === base + path}>
-    <Button class="tab-button" tag="a" href={base + path} variant="unelevated">
+<div class="tab-container" data-active={currentPath.includes(path)}>
+    <Button class="tab-button" tag="a" href={`${base}/${path}/`} variant="unelevated">
         {name}
     </Button>
     <div class="tab-indicator"></div>
