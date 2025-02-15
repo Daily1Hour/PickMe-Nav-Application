@@ -7,8 +7,8 @@
 </script>
 
 <div>
-    <TopAppBar variant="fixed" prominent dense>
-        <Row class="nav-container">
+    <TopAppBar id="pickme-nav" variant="fixed" prominent dense>
+        <Row>
             <Section>
                 <Logo />
                 <Title>
