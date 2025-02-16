@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
 
-    const base = import.meta.env.VITE_PUBLIC_URL;
+    const STATIC_ASSETS_URL = import.meta.env.VITE_STATIC_ASSETS_URL;
     const MOBILE_BREAKPOINT = 768;
 
     let width = 0;
@@ -13,8 +13,8 @@
 
 <a href="/" aria-label="Home" title="Home">
     {#if width > MOBILE_BREAKPOINT}
-        <img src={base + "resolution-logo.svg"} alt="logo" style="height:75px;" />
+        <img src={STATIC_ASSETS_URL + "resolution-logo.svg"} alt="logo" style="height:75px;" />
     {:else}
-        <img src={base + "monogram-hq.svg"} alt="logo" style="height: 75px;" />
+        <img src={STATIC_ASSETS_URL + "monogram-hq.svg"} alt="logo" style="height: 75px;" />
     {/if}
 </a>

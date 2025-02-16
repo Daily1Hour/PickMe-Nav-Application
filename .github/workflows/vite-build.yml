@@ -39,6 +39,7 @@ jobs:
         env:
           VITE_PUBLIC_URL: ${{ vars.VITE_GH_PAGE_URL }}
           VITE_PARCEL_URL: ${{ vars.VITE_GH_PAGE_AUTH_PARCEL_URL }}
+          VITE_STATIC_ASSETS_URL: ${{ vars.VITE_GH_PAGE_URL }}
         run: |
           npm run build
 
@@ -46,6 +47,7 @@ jobs:
         env:
           VITE_PUBLIC_URL: ${{ vars.VITE_PUBLIC_URL }}
           VITE_PARCEL_URL: ${{ vars.VITE_PARCEL_URL }}
+          VITE_STATIC_ASSETS_URL: ${{ vars.VITE_STATIC_ASSETS_URL }}
         run: |
           npm run build:single-spa
 
