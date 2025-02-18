@@ -3,17 +3,16 @@
     import AuthControl from "./AuthControl.svelte";
 </script>
 
-<div class="tools">
+<div class="pickme-nav__tools">
     <DarkModeToggle />
     <AuthControl />
 </div>
 
 <style>
-    .tools {
+    .pickme-nav__tools {
         display: flex;
-        align-items: center;
     }
-    :global(.tools > *) {
-        display: block !important;
+    :global(.mdc-top-app-bar__action-item) {
+        align-self: center !important;
     }
 </style>
